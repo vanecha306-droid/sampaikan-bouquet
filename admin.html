@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Sampaikan Bouquet</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <h2>SAMPAIKAN<span>.</span></h2>
+    <button id="logoutButton" class="logout-button" hidden>LOGOUT</button>
+  </header>
+
+  <main>
+    <section id="loginSection" class="login-section">
+      <div class="login-card">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1>ADMIN LOGIN</h1>
+        <p class="subtitle">Sampaikan Bouquet Management</p>
+
+        <form id="loginForm">
+          <label for="username">Username</label>
+          <input id="username" type="text" placeholder="Masukkan username" required>
+
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Masukkan password" required>
+
+          <button type="submit">LOGIN</button>
+          <p id="loginMessage" class="message"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="dashboardSection" class="dashboard" hidden>
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">SAMPAIKAN BOUQUET</p>
+          <h1>Product Dashboard</h1>
+          <p>Kelola produk katalog kamu di sini.</p>
+        </div>
+      </div>
+
+      <section class="form-card">
+        <h2 id="formTitle">Tambah Produk Baru</h2>
+
+        <form id="productForm">
+          <input type="hidden" id="productId">
+
+          <label for="productName">Nama Produk</label>
+          <input id="productName" type="text" placeholder="Contoh: Sweet Pink Bouquet" required>
+
+          <label for="productPrice">Harga (Rupiah)</label>
+          <input id="productPrice" type="number" min="0" placeholder="150000" required>
+
+          <label for="productCategory">Kategori</label>
+          <select id="productCategory" required>
+            <option value="flower">Flower Bouquet</option>
+            <option value="money">Money Bouquet</option>
+            <option value="snack">Snack Bouquet</option>
+          </select>
+
+          <label for="productDescription">Deskripsi</label>
+          <textarea id="productDescription" placeholder="Deskripsi produk..."></textarea>
+
+          <label for="productImage">Foto Produk</label>
+          <input id="productImage" type="file" accept="image/*">
+          <p class="hint">Format gambar umum, maksimal 5 MB.</p>
+
+          <div class="form-actions">
+            <button type="submit" id="saveButton">SIMPAN PRODUK</button>
+            <button type="button" id="cancelButton" class="cancel-button" hidden>BATAL EDIT</button>
+          </div>
+
+          <p id="formMessage" class="message"></p>
+        </form>
+      </section>
+
+      <section class="products-section">
+        <div class="products-heading">
+          <h2>Daftar Produk</h2>
+          <button id="refreshButton" class="refresh-button">REFRESH</button>
+        </div>
+        <div id="productList" class="product-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff3f6;
+  color: #44252c;
+}
+
+.header {
+  background: #f5a9c0;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  color: #f32c0b;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.header h2 span {
+  color: white;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.logout-button,
+.refresh-button {
+  padding: 11px 20px;
+  border-radius: 30px;
+  color: #f32c0b;
+  background: #fff;
+  border: 1px solid #f32c0b;
+}
+
+.login-section {
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  padding: 25px;
+}
+
+.login-card,
+.form-card {
+  background: white;
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 10px 35px rgba(100, 30, 50, .07);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+}
+
+.eyebrow {
+  color: #f32c0b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.login-card h1,
+.dashboard-heading h1 {
+  color: #f32c0b;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: #98777e;
+  font-size: 12px;
+  margin: 10px 0 28px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 17px 0 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #f0d6dd;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  background: #fffafd;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #f32c0b;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.login-card form button,
+#saveButton {
+  width: 100%;
+  padding: 15px;
+  margin-top: 22px;
+  background: #f32c0b;
+  color: white;
+  border-radius: 30px;
+}
+
+.dashboard {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.dashboard-heading {
+  margin-bottom: 28px;
+}
+
+.dashboard-heading h1 {
+  margin-bottom: 10px;
+}
+
+.dashboard-heading p:last-child {
+  color: #98777e;
+  font-size: 13px;
+}
+
+.form-card h2,
+.products-heading h2 {
+  font-size: 20px;
+  color: #f32c0b;
+  margin-bottom: 15px;
+}
+
+.form-card {
+  margin-bottom: 45px;
+}
+
+.hint {
+  font-size: 11px;
+  color: #98777e;
+  margin-top: 7px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.cancel-button {
+  margin-top: 22px;
+  border-radius: 30px;
+  background: #ffe6ed;
+  color: #b52c42;
+}
+
+.message {
+  font-size: 12px;
+  margin-top: 13px;
+  color: #b52c42;
+}
+
+.products-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(100, 30, 50, .06);
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: #ffe6ed;
+}
+
+.product-info {
+  padding: 17px;
+}
+
+.product-info h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 12px;
+  color: #98777e;
+  margin-bottom: 7px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.product-actions button {
+  flex: 1;
+  padding: 10px 5px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.edit-button {
+  background: #ffe6ed;
+  color: #b52c42;
+}
+
+.delete-button {
+  background: #f32c0b;
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard {
+    padding: 30px 16px;
+  }
+
+  .login-card,
+  .form-card {
+    padding: 23px;
+  }
+}
+
+@media (max-width: 430px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 18px;
+  }
+
+  .login-card h1 {
+    font-size: 25px;
+  }
+}
