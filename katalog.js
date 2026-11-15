@@ -6,7 +6,7 @@ const SUPABASE_KEY = "sb_publishable_fZJ1VvPJX4zm1xwgagFoew_av3LCfik";
 const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // NOMOR WHATSAPP TOKO
-const whatsappNumber = "088289114584";
+const whatsappNumber = "6288289114584";
 
 // ELEMENT HTML
 const searchInput = document.getElementById("searchInput");
