@@ -1,0 +1,271 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5a9c0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* MAIN BACKGROUND */
+.landing {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5a9c0;
+    overflow: hidden;
+}
+
+/* TOP TITLE */
+.top-section {
+    width: 100%;
+    height: 25vw;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.top-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(110px, 27vw, 300px);
+    color: #f32c0b;
+    line-height: 0.9;
+    letter-spacing: -8px;
+    white-space: nowrap;
+}
+
+/* GALLERY */
+.gallery {
+    width: 100%;
+    height: 53vw;
+    min-height: 320px;
+    max-height: 700px;
+    position: relative;
+    background: #9b4d3d;
+}
+
+.photo {
+    position: absolute;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-one {
+    width: 52%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.photo-two {
+    width: 48%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.photo-two img {
+    object-position: center;
+}
+
+/* TEXT ON PHOTO */
+.gallery-text {
+    position: absolute;
+    color: #ffd0dd;
+    font-size: clamp(13px, 2.5vw, 30px);
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+.text-right {
+    top: 8%;
+    right: 5%;
+    text-align: right;
+}
+
+.text-left {
+    bottom: 12%;
+    left: 4%;
+}
+
+/* BOTTOM TITLE */
+.bottom-title {
+    width: 100%;
+    height: 25vw;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bottom-title h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(100px, 26vw, 290px);
+    color: #f32c0b;
+    line-height: 0.9;
+    letter-spacing: -8px;
+    white-space: nowrap;
+}
+
+/* FOOTER */
+.footer {
+    min-height: 230px;
+    padding: 50px 5% 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    font-size: 42px;
+    color: #142ca3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    color: #142ca3;
+    font-size: clamp(10px, 1.4vw, 16px);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    .top-section {
+        height: 30vw;
+        min-height: 140px;
+    }
+
+    .top-title {
+        font-size: 27vw;
+        letter-spacing: -4px;
+    }
+
+    .gallery {
+        height: 65vw;
+        min-height: 280px;
+    }
+
+    .bottom-title {
+        height: 30vw;
+        min-height: 140px;
+    }
+
+    .bottom-title h2 {
+        font-size: 25vw;
+        letter-spacing: -4px;
+    }
+
+    .footer {
+        min-height: 180px;
+    }
+
+    .footer-info {
+        flex-wrap: wrap;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    .top-section {
+        height: 32vw;
+        min-height: 120px;
+    }
+
+    .top-title {
+        font-size: 29vw;
+        letter-spacing: -3px;
+    }
+
+    .gallery {
+        height: 115vw;
+        min-height: 380px;
+        max-height: 550px;
+    }
+
+    .photo-one {
+        width: 100%;
+        height: 55%;
+        top: 0;
+    }
+
+    .photo-two {
+        width: 100%;
+        height: 55%;
+        top: 45%;
+        right: 0;
+    }
+
+    .gallery-text {
+        font-size: 12px;
+    }
+
+    .text-right {
+        top: 5%;
+        right: 4%;
+    }
+
+    .text-left {
+        bottom: 5%;
+        left: 4%;
+    }
+
+    .bottom-title {
+        height: 32vw;
+        min-height: 120px;
+    }
+
+    .bottom-title h2 {
+        font-size: 25vw;
+        letter-spacing: -3px;
+    }
+
+    .footer {
+        padding: 35px 15px;
+        min-height: 180px;
+        gap: 20px;
+    }
+
+    .socials a {
+        font-size: 32px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 10px;
+    }
+}
