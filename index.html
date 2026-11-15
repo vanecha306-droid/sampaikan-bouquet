@@ -22,8 +22,8 @@
 
         <!-- JUDUL ATAS -->
         <section class="top-section">
-            <h1 class="top-title">flower</h1>
-        </section>
+    <h1 class="top-title" id="adminAccess">flower</h1>
+</section>
 
         <!-- FOTO BOUQUET -->
         <section class="gallery">
@@ -65,6 +65,24 @@
         </footer>
 
     </main>
+<script>
+    const adminAccess = document.getElementById("adminAccess");
+    let clickCount = 0;
+    let clickTimer;
 
+    adminAccess.addEventListener("click", function () {
+        clickCount++;
+
+        clearTimeout(clickTimer);
+
+        if (clickCount === 5) {
+            window.location.href = "admin.html";
+        }
+
+        clickTimer = setTimeout(function () {
+            clickCount = 0;
+        }, 2000);
+    });
+</script>
 </body>
 </html>
